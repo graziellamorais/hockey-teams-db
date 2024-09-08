@@ -5,6 +5,12 @@ This Python script is designed to scrape NHL team statistics from a website that
 
 The script achieves this by following these steps:
 
+**Libraries Used**:
+  requests: Used for sending HTTP requests to fetch the web pages.
+  BeautifulSoup (from bs4): Used for parsing the HTML content of the web pages and extracting relevant data.
+  pandas: Used for organizing the scraped data into a structured DataFrame and saving it to a CSV file.
+  time: Used for adding delays between requests to prevent overloading the server.
+
 **Pagination Handling**: The URL structure of the website includes a page_num parameter, which is used to navigate between different pages of the team statistics. The scrape_page function dynamically updates the URL based on the current page number, allowing the script to scrape data from each page.
 
 **Web Scraping with BeautifulSoup**: For each page, the script sends an HTTP request using the requests library. If the page loads successfully, the HTML content is parsed using BeautifulSoup, and the relevant data—team names, wins, and losses—are extracted from the table rows on the page.
